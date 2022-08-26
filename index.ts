@@ -107,7 +107,7 @@ appDiv.innerHTML = `
 `;*/
 
 //Mais Functions
-function sum(n1: number, n2: number): number {
+/*function sum(n1: number, n2: number): number {
   return n1 + n2;
 }
 
@@ -124,4 +124,25 @@ appDiv.innerHTML = `
   lastname: 'A. De Oliveira',
   name: 'Carlos E.',
 })}</h2>
-`;
+`;*/
+
+//Alertando usando function/btn
+let title: string = 'Olá, mundo!!';
+let paragraph: string = 'blábláblá...';
+
+let counter = 0;
+
+let intervalId = setInterval(() => {
+  counter = counter + 1;
+  const appP: HTMLElement = document.getElementById('app.p');
+  appP.innerHTML = 'Contador: ' + counter;
+}, 1000);
+
+const btn = document.getElementById('app.btn');
+btn?.addEventListener('click', alertMethod);
+function alertMethod(this: HTMLElement, ev: Event) {
+  alert('Alertando em TypeScript');
+}
+
+const appH1: HTMLElement = document.getElementById('app.h1');
+appH1.innerHTML = title;
