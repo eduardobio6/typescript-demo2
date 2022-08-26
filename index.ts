@@ -127,7 +127,7 @@ appDiv.innerHTML = `
 `;*/
 
 //Alertando usando function/btn
-let title: string = 'Olá, mundo!!';
+/*let title: string = 'Olá, mundo!!';
 let paragraph: string = 'blábláblá...';
 
 let counter = 0;
@@ -145,4 +145,22 @@ function alertMethod(this: HTMLElement, ev: Event) {
 }
 
 const appH1: HTMLElement = document.getElementById('app.h1');
-appH1.innerHTML = title;
+appH1.innerHTML = title;*/
+
+class Greeter {
+  greeting: string;
+  constructor(message: string) {
+    this.greeting = message;
+  }
+  greet() {
+    return 'Hello, ' + this.greeting;
+  }
+}
+
+let greeter = new Greeter('MyApp');
+
+const appDiv: HTMLElement = document.getElementById('app.text');
+appDiv.innerHTML = `
+<h1>Classes</h1>
+<h2>${greeter.greet()}!</h2>
+`;
