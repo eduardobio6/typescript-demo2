@@ -147,6 +147,7 @@ function alertMethod(this: HTMLElement, ev: Event) {
 const appH1: HTMLElement = document.getElementById('app.h1');
 appH1.innerHTML = title;*/
 
+//Exemplo de classe em typescript
 class Greeter {
   greeting: string;
   constructor(message: string) {
